@@ -12,7 +12,7 @@ namespace PIII_Lab2
         }
 
         static void Main(string[] args)
-        {
+        {   
             try
             {
                 Console.WriteLine("Podaj A");
@@ -25,9 +25,11 @@ namespace PIII_Lab2
                 string c = Console.ReadLine();
                 double cc = double.Parse(c);
 
-                Double delta = (bb * bb - 4 * aa * cc);
+                double delta;
 
-                Console.WriteLine($"Delta wynosi: "{ delta});
+                delta = (bb * bb - 4 * aa * cc);
+
+                Console.WriteLine($"Delta wynosi: {delta}");
 
                 Wyniki wyniki = Wyniki.ZeroMZ;
                 wyniki |= Wyniki.JednoMZ;
