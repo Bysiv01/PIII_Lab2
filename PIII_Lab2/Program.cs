@@ -24,18 +24,41 @@ namespace PIII_Lab2
             b = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj c");
             c = Convert.ToDouble(Console.ReadLine());
-            
+
             delta = (b * b - 4 * a * c);
 
             Console.WriteLine($"Delta jest rowna: {delta}");
 
-            Wyniki wynik = Wyniki.JednoMZ | Wyniki.DwaMZ | Wyniki.ZeroMZ;
+            Wyniki wyniki = Wyniki.ZeroMZ;
+            wyniki |= Wyniki.JednoMZ;
+            wyniki |= Wyniki.DwaMZ;
 
-            switch (wynik)
+            if (delta == 0)
             {
-                
+                wyniki = Wyniki.JednoMZ;
             }
-           
+            else if (delta > 0)
+            {
+                wyniki = Wyniki.DwaMZ;
+            }
+            else
+            {
+                wyniki = Wyniki.ZeroMZ;
+            }
+
+
+            switch (wyniki)
+            {
+                case Wyniki.ZeroMZ:
+                    Console.WriteLine("Jest 0 miejsc zerowych");
+                    break;
+                case Wyniki.JednoMZ:
+                    Console.WriteLine("Jest 1 miejsce zerowe");
+                    break;
+                case Wyniki.DwaMZ:
+                    Console.WriteLine("Są 2 miejsca zerowe");
+                    break;
+            }
         }
     }
     
