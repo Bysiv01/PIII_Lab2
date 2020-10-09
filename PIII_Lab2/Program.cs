@@ -25,9 +25,7 @@ namespace PIII_Lab2
                 string c = Console.ReadLine();
                 double cc = double.Parse(c);
 
-                double delta;
-
-                delta = (bb * bb - 4 * aa * cc);
+                double delta = (bb * bb - 4 * aa * cc);
 
                 Console.WriteLine($"Delta wynosi: {delta}");
 
@@ -64,7 +62,7 @@ namespace PIII_Lab2
             }
             catch (FormatException)
             {
-                Console.WriteLine("któraś z podanych wartości nie jest liczba!");
+                Console.WriteLine("Podana wartość nie jest liczbą!");
             }
 
 
