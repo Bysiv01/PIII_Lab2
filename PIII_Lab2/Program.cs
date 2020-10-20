@@ -26,6 +26,10 @@ namespace PIII_Lab2
                 double cc = double.Parse(c);
 
                 double delta = (bb * bb - 4 * aa * cc);
+                
+                double x0 = -bb / (2 * aa);
+                double x1 = (-bb + Math.Sqrt(delta)) / (2 * aa);
+                double x2 = (-bb - Math.Sqrt(delta)) / (2 * aa);
 
                 Console.WriteLine($"Delta wynosi: {delta}");
 
@@ -53,10 +57,10 @@ namespace PIII_Lab2
                         Console.WriteLine("Jest 0 miejsc zerowych");
                         break;
                     case Wyniki.JednoMZ:
-                        Console.WriteLine("Jest 1 miejsce zerowe");
+                        Console.WriteLine($"Jest 1 miejsce zerowe {x0}");
                         break;
                     case Wyniki.DwaMZ:
-                        Console.WriteLine("Są 2 miejsca zerowe");
+                        Console.WriteLine($"Są 2 miejsca zerowe w: {x1} i {x2}");
                         break;
                 }
             }
