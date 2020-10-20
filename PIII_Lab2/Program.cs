@@ -33,9 +33,7 @@ namespace PIII_Lab2
 
                 Console.WriteLine($"Delta wynosi: {delta}");
 
-                Wyniki wyniki = Wyniki.ZeroMZ;
-                wyniki |= Wyniki.JednoMZ;
-                wyniki |= Wyniki.DwaMZ;
+                Wyniki wyniki;
 
                 if (delta == 0)
                 {
